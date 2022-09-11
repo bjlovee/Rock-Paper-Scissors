@@ -2,27 +2,42 @@ body{
   background-color: black;  
 }
 
+.logo{
+    max-width: 20%;
+    position:absolute;
+    left: 500pt;
+    
+}
+
 .btns-container {
-    position: relative;
-    left: 600pt;
-    top: 150pt
+    position: absolute;
+    left: 450pt;
+    top: 450pt
 }
 
 
 .btnsStyle {
-    background-color:slategrey;
+    font-family: OCR A Std, monospace;
+    background-color:seagreen;
     border: 200px;
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     text-decoration: none; 
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;  
     border: solid;
     border-radius: 50px;
     border-style: groove; 
-    border-color: olive;
-    box-sizing: content-box;
+    border-color: yellow;
+  
 }
+
+.btnsStyle:hover{
+    color: yellow;
+   background-color: red; 
+
+} 
+ 
