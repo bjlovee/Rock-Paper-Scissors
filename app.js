@@ -1,39 +1,23 @@
-const Choices = {
-    spock: {
-        scissors: 'smashes',
-        rock: 'vaporizes',
-    },
-    scissors: {
-        paper: 'cuts',
-        lizard: 'decapitates',
-    },
-    paper: {
-        rock: 'covers',
-        spock: 'disproves',
-    },
-    rock: {
-        lizard: 'crushes',
-        scissors: 'crushes',
-    },
-    lizard: {
-        spock: 'poisons',
-        paper: 'eats',
-    },
-};
+const playerChoice = document.getElementById('player-choice')
+const cpuChoiceDisplay = document.getElementById('cpu-choice')
+const resultDisplay = document.getElementById('result')
+const possibleChoices = document.querySelectorAll('button')
 
-const cpu = '';
-let playerChoice  = null 
-let score = [0, 0];
+let player
+let cpuChoice
+let result
 
-const player = '' 
-const randomIndex = Math.floor(Math.random() * Choices.length);
-player.currentChoice = Choices[0];
-cpu.currentChoice = Choices[randomIndex];
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+player = e.target.id
+playerChoice.innerHTML = player
+generateCpuChoice();
+getResult()
+}));
 
-function cpuChooses() {
-    // const randomIndex = Math.floor(Math.random() * Choices.length);
-    cpu.currentChoice = Choices[randomIndex];
-    }
+function generateCpuChoice() {
+    const randomNumber = Math.floor(Math.random() * 5)
+    console.log(randomNumber)
+}
 
 const rockBtn = document.getElementById('rock')
 const paperBtn = document.getElementById('paper')
@@ -41,68 +25,95 @@ const scissorsBtn = document.getElementById('scissors')
 const lizzardBtn = document.getElementById('lizard')
 const spockBtn = document.getElementById('spock')
 
-        // WIN CONDITION
- function compareChoices() { 
-    cpuChooses()     
-    const spockChoice = 'spock'
-    if(spockChoice in Choices['scissors']) {
-         // spoke beats this choice
-    }
-    if(spockChoice in Choices['rock']) {
-        // spock beats this choice
-    }
 
-    const scissorsChoice = 'scissors'
-    if(scissorsChoice in Choices['paper']) {
-        //    scissors beat this choice  
-    }
-    if(scissorsChoice in Choices['lizard']) {
-        //    scissors beat this choice  
-    }
+function generateCpuChoice() {
+    const randomNumber = Math.floor(Math.random() * 5) + 1
 
-    const paperChoice = 'paper'
-    if(paperChoice in Choices['rock']) {
-         //    paper beat this choice  
+    if(randomNumber === 1) {
+        cpuChoice = 'rock'
     }
-    if(paperChoice in Choices['spock']) {
-        //    paper beat this choice  
+    if(randomNumber === 2) {
+        cpuChoice = 'paper'
     }
-    
-    const rockChoice = 'rock'
-    if(rockChoice in Choices['lizard']) {
-        //    rock beat this choice  
+    if(randomNumber === 3) {
+        cpuChoice = 'scissors'
     }
-    if(rockChoice in Choices['scissors']) {
-        //    rock beat this choice  
-    } 
-
-    const lizardChoice = 'lizard'
-    if(lizardChoice in Choices['spock']) {
-        //    lizard beat this choice  
+    if(randomNumber === 4) {
+        cpuChoice = 'lizzard'
     }
-    if(lizardChoice in Choices['paper']) {
-        //    lizard beat this choice  
-    } 
+    if(randomNumber === 5) {
+        cpuChoice = 'spock'
+    }
+    cpuChoiceDisplay.innerHTML = cpuChoice
 }
 
-// function isWinner(player1, player2) {
-//     return player2 in Choices[player1]
-// }
 
-function displayResult(result){
-    const resultText = document.getElementById('#message');
-    resultText.innerText = result;
-    // document.body.appendChild(resultText);
-  }
-
-rockBtn.addEventListener('click', (evt) => {
-    const isInput = evt.target.nodeName === 'INPUT';
-    if (!isInput) {
-        return;
+function getResult() {
+    if(player === cpuChoice) {
+    result = 'its a draw!'
     }
-    player.currentChoice = evt.target.value;
-compareChoices();
-})
-
-compareChoices();
-
+    if(player === 'spock' && cpuChoice === 'scissors') {
+        result = 'player wins!'
+    }
+    if(player === 'spock' && cpuChoice === 'rock') {
+        result = 'player wins!'
+    }
+    if(player === 'scissors' && cpuChoice === 'paper') {
+        result = 'player wins!'
+    }
+    if(player === 'scissors' && cpuChoice === 'lizaed') {
+        result = 'player wins!'
+    }
+    if(player === 'paper' && cpuChoice === 'rock') {
+        result = 'player wins!'
+    }
+    if(player === 'paper' && cpuChoice === 'spock') {
+        result = 'player wins!'
+    }
+    if(player === 'rock' && cpuChoice === 'lizzard') {
+        result = 'player wins!'
+    }
+    if(player === 'rock' && cpuChoice === 'scissors') {
+        result = 'player wins!'
+    }
+    if(player === 'lizzard' && cpuChoice === 'spock') {
+        result = 'player wins!'
+    }
+    if(player === 'lizzard' && cpuChoice === 'spock') {
+        result = 'player wins!'
+    }
+    if(player === cpuChoice) {
+        result = 'its a draw!'
+    }
+    if(cpuChoice === 'spock' && player === 'scissors') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'spock' && player === 'rock') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'scissors' && player === 'paper') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'scissors' && player === 'lizaed') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'paper' && player === 'rock') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'paper' && player === 'spock') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'rock' && player === 'lizzard') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'rock' && player === 'scissors') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'lizzard' && player === 'spock') {
+        result = 'cpu wins!'
+    }
+    if(cpuChoice === 'lizzard' && player === 'spock') {
+        result = 'cpu wins!'
+    }
+    resultDisplay.innerHTML = result
+}

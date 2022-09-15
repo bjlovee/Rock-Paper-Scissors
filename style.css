@@ -9,6 +9,10 @@ body{
     
 }
 
+.stats{
+color: coral;
+}
+
 .btns-container {
     position: absolute;
     left: 400pt;
