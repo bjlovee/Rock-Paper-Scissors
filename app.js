@@ -50,70 +50,68 @@ function generateCpuChoice() {
 
 function getResult() {
     if(player === cpuChoice) {
-    result = 'its a draw!'
+    result = 'Its a draw!'
     }
     if(player === 'spock' && cpuChoice === 'scissors') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'spock' && cpuChoice === 'rock') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'scissors' && cpuChoice === 'paper') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'scissors' && cpuChoice === 'lizaed') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'paper' && cpuChoice === 'rock') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'paper' && cpuChoice === 'spock') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'rock' && cpuChoice === 'lizzard') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'rock' && cpuChoice === 'scissors') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'lizzard' && cpuChoice === 'spock') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
     if(player === 'lizzard' && cpuChoice === 'spock') {
-        result = 'player wins!'
+        result = 'Player wins!'
     }
-    if(player === cpuChoice) {
-        result = 'its a draw!'
-    }
+    
     if(cpuChoice === 'spock' && player === 'scissors') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'spock' && player === 'rock') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'scissors' && player === 'paper') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'scissors' && player === 'lizaed') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'paper' && player === 'rock') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'paper' && player === 'spock') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'rock' && player === 'lizzard') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'rock' && player === 'scissors') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'lizzard' && player === 'spock') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     if(cpuChoice === 'lizzard' && player === 'spock') {
-        result = 'cpu wins!'
+        result = 'Cpu wins!'
     }
     resultDisplay.innerHTML = result
 }

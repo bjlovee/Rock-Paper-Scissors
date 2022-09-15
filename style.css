@@ -9,10 +9,29 @@ body{
     
 }
 
-.stats{
+#stats{
+font-family: 'Redkost Comic', sans-serif;                                                                                   
+font-size: x-large;                                               
 color: coral;
 }
 
+.playerStyle{
+position: relative;
+left: 180pt;
+top: 150pt;
+}
+
+.cpuStyle{
+    position: relative;
+    left: 850pt;
+    top: 100pt;
+    }
+
+    .resultStyle{
+        position: relative;
+        left: 510pt;
+        top: 200pt
+        }
 .btns-container {
     position: absolute;
     left: 400pt;
