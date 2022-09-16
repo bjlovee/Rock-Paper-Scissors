@@ -2,16 +2,23 @@ const playerChoice = document.getElementById('player-choice')
 const cpuChoiceDisplay = document.getElementById('cpu-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
+const playerScore = document.querySelector('.playerScore')
+const cpuScore = document.querySelector('.cpuScore')
 
 let player
 let cpuChoice
 let result
+let plScore = 1;
+let cpScore = 1;
+
+
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 player = e.target.id
 playerChoice.innerHTML = player
 generateCpuChoice();
-getResult()
+getResult();
+scoreDisplay();
 }));
 
 function generateCpuChoice() {
@@ -25,6 +32,16 @@ const scissorsBtn = document.getElementById('scissors')
 const lizzardBtn = document.getElementById('lizard')
 const spockBtn = document.getElementById('spock')
 
+
+function scoreDisplay() {
+if (player > cpuChoice) {
+    playerScore.innerHTML = plScore++;
+}
+if (cpuChoice > player) {
+    cpuScore.innerHTML = cpScore++;
+}
+getResult();
+};
 
 function generateCpuChoice() {
     const randomNumber = Math.floor(Math.random() * 5) + 1
