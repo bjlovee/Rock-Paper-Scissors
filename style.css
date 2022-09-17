@@ -2,11 +2,6 @@ body{
   background-color: black;  
 }
 
-/* @font-face {
-    font-family: 'Masiku', sans-serif;
-    @import url('http://fonts.cdnfonts.com/css/masiku');
-  } */
-
 .logo{
     max-width: 20%;
     position:absolute;
