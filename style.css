@@ -1,5 +1,5 @@
 body{
-  background-color: black;  
+  background-color: rgb(56, 122, 169);  
 }
 
 .logo{
@@ -9,21 +9,16 @@ body{
     
  }
 
- /* #charactersLogo{
-    max-width: 10%;
-    height: auto;
-    position: relative;
-}  */
-
     .rules{
     position: relative;
     left: 1150pt;
-    bottom: 250pt;
+    bottom: 300pt;
 } 
 
 .restartStyle {
+    color: rgb(128, 61, 140);
     font-family: 'Masiku', sans-serif;
-    background-color:rgb(75, 161, 177);
+    background-color: rgba(240, 139, 111, 0.734);
     border: 200px;
     padding: 25px;
     text-align: center;
@@ -40,22 +35,22 @@ body{
     left: 12pt;
 }
 
-#stats{
+.stats{
 font-family: 'Masiku', sans-serif;                                                                                
-font-size: x-large;                                               
+font-size: x-large;                                              
 color: coral;
 }
 
 .playerStyle{
 position: relative;
-left: 180pt;
+left: 150pt;
 top: 150pt;
 }
 
 .cpuStyle{
     position: relative;
     left: 850pt;
-    top: 70pt;
+    top: 60pt;
     }
 
     .resultStyle{
@@ -72,9 +67,9 @@ top: 150pt;
 
 .btnsStyle {
     font-family: 'Masiku', sans-serif;
-    background-color:rgb(75, 161, 177);
+    background-color: rgba(240, 139, 111, 0.734);
     border: 200px;
-    color: white;
+    color: rgb(128, 61, 140);
     padding: 25px;
     text-align: center;
     text-decoration: none; 
@@ -97,6 +92,3 @@ top: 150pt;
     background-color: rgb(5, 238, 63); 
  } 
   
- 
- 
- /* Create A modal */

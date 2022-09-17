@@ -1,9 +1,10 @@
-const playerChoice = document.getElementById('player-choice')
+const playerChoiceDisplay = document.getElementById('player-choice')
 const cpuChoiceDisplay = document.getElementById('cpu-choice')
 const resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelectorAll('button')
-const playerScore = document.querySelector('.playerScore')
+const possibleChoices = document.querySelectorAll('.btnsStyle')
+const playerScore = document.querySelector('#player-score')
 const cpuScore = document.querySelector('.cpuScore')
+console.log(possibleChoices)
 
 let player
 let cpuChoice
@@ -12,28 +13,26 @@ let plScore = 1;
 let cpScore = 1;
 
 
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-player = e.target.id
-playerChoice.innerHTML = player
-generateCpuChoice();
-getResult();
-scoreDisplay();
-}));
+possibleChoices.forEach(possibleChoice => {
+    possibleChoice.addEventListener('click', (e) => {
+        player = e.target.id
+        playerChoiceDisplay.innerHTML = `Player choice: ${player}`;
+        generateCpuChoice();
+        getResult();
+        scoreDisplay();
+        console.log(possibleChoices)
+    })
+});
 
-function generateCpuChoice() {
-    const randomNumber = Math.floor(Math.random() * 5)
-    console.log(randomNumber)
-}
+// const rockBtn = document.getElementById('rock')
+// const paperBtn = document.getElementById('paper')
+// const scissorsBtn = document.getElementById('scissors')
+// const lizardBtn = document.getElementById('lizard')
+// const spockBtn = document.getElementById('spock')
+const restartBtn = document.querySelector('#restart')
 
-const rockBtn = document.getElementById('rock')
-const paperBtn = document.getElementById('paper')
-const scissorsBtn = document.getElementById('scissors')
-const lizardBtn = document.getElementById('lizard')
-const spockBtn = document.getElementById('spock')
-const restartBtn = document.getElementById('restart')
-
-restartBtn.addEventListener('click', (e) => {
-    location.reload();
+restartBtn.addEventListener('click', (event) => {
+    window.location.reload();
  })
 
 function scoreDisplay() {
@@ -67,11 +66,10 @@ function generateCpuChoice() {
     cpuChoiceDisplay.innerHTML = cpuChoice
 }
 
-
 function getResult() {
     if(player === cpuChoice) {
     result = 'Its a draw!'
-    }
+    } 
     if(player === 'spock' && cpuChoice === 'scissors') {
         result = 'Player wins!'
     }
@@ -102,7 +100,6 @@ function getResult() {
     if(player === 'lizard' && cpuChoice === 'spock') {
         result = 'Player wins!'
     }
-    
     if(cpuChoice === 'spock' && player === 'scissors') {
         result = 'Cpu wins!'
     }
@@ -134,8 +131,5 @@ function getResult() {
         result = 'Cpu wins!'
     }
     resultDisplay.innerHTML = result
-}
+};
 
-const showImage = (event) => {
-    document.getElementById("rockImg").style.display ='block';
-}
