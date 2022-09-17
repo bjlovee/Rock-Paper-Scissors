@@ -12,7 +12,6 @@ let plScore = 1;
 let cpScore = 1;
 
 
-
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
 player = e.target.id
 playerChoice.innerHTML = player
@@ -29,9 +28,13 @@ function generateCpuChoice() {
 const rockBtn = document.getElementById('rock')
 const paperBtn = document.getElementById('paper')
 const scissorsBtn = document.getElementById('scissors')
-const lizzardBtn = document.getElementById('lizard')
+const lizardBtn = document.getElementById('lizard')
 const spockBtn = document.getElementById('spock')
+const restartBtn = document.getElementById('restart')
 
+restartBtn.addEventListener('click', (e) => {
+    location.reload();
+ })
 
 function scoreDisplay() {
 if (player > cpuChoice) {
@@ -56,7 +59,7 @@ function generateCpuChoice() {
         cpuChoice = 'scissors'
     }
     if(randomNumber === 4) {
-        cpuChoice = 'lizzard'
+        cpuChoice = 'lizard'
     }
     if(randomNumber === 5) {
         cpuChoice = 'spock'
@@ -78,7 +81,7 @@ function getResult() {
     if(player === 'scissors' && cpuChoice === 'paper') {
         result = 'Player wins!'
     }
-    if(player === 'scissors' && cpuChoice === 'lizaed') {
+    if(player === 'scissors' && cpuChoice === 'lizard') {
         result = 'Player wins!'
     }
     if(player === 'paper' && cpuChoice === 'rock') {
@@ -87,16 +90,16 @@ function getResult() {
     if(player === 'paper' && cpuChoice === 'spock') {
         result = 'Player wins!'
     }
-    if(player === 'rock' && cpuChoice === 'lizzard') {
+    if(player === 'rock' && cpuChoice === 'lizard') {
         result = 'Player wins!'
     }
     if(player === 'rock' && cpuChoice === 'scissors') {
         result = 'Player wins!'
     }
-    if(player === 'lizzard' && cpuChoice === 'spock') {
+    if(player === 'lizard' && cpuChoice === 'spock') {
         result = 'Player wins!'
     }
-    if(player === 'lizzard' && cpuChoice === 'spock') {
+    if(player === 'lizard' && cpuChoice === 'spock') {
         result = 'Player wins!'
     }
     
@@ -109,7 +112,7 @@ function getResult() {
     if(cpuChoice === 'scissors' && player === 'paper') {
         result = 'Cpu wins!'
     }
-    if(cpuChoice === 'scissors' && player === 'lizaed') {
+    if(cpuChoice === 'scissors' && player === 'lizard') {
         result = 'Cpu wins!'
     }
     if(cpuChoice === 'paper' && player === 'rock') {
@@ -118,17 +121,21 @@ function getResult() {
     if(cpuChoice === 'paper' && player === 'spock') {
         result = 'Cpu wins!'
     }
-    if(cpuChoice === 'rock' && player === 'lizzard') {
+    if(cpuChoice === 'rock' && player === 'lizard') {
         result = 'Cpu wins!'
     }
     if(cpuChoice === 'rock' && player === 'scissors') {
         result = 'Cpu wins!'
     }
-    if(cpuChoice === 'lizzard' && player === 'spock') {
+    if(cpuChoice === 'lizard' && player === 'spock') {
         result = 'Cpu wins!'
     }
-    if(cpuChoice === 'lizzard' && player === 'spock') {
+    if(cpuChoice === 'lizard' && player === 'spock') {
         result = 'Cpu wins!'
     }
     resultDisplay.innerHTML = result
+}
+
+const showImage = (event) => {
+    document.getElementById("rockImg").style.display ='block';
 }

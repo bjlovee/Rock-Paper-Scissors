@@ -7,6 +7,37 @@ body{
     position:absolute;
     left: 500pt;
     
+ }
+
+ /* #charactersLogo{
+    max-width: 10%;
+    height: auto;
+    position: relative;
+}  */
+
+    .rules{
+    position: relative;
+    left: 1150pt;
+    bottom: 250pt;
+} 
+
+.restartStyle {
+    font-family: 'Redkost Comic', sans-serif;
+    background-color:rgb(75, 161, 177);
+    border: 200px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none; 
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;  
+    border: solid;
+    border-radius: 50px;
+    border-style: groove; 
+    border-color: yellow;
+    position: relative;
+    bottom: 230pt;
+    left: 12pt;
 }
 
 #stats{
@@ -40,8 +71,8 @@ top: 150pt;
 
 
 .btnsStyle {
-    font-family: OCR A Std, monospace;
-    background-color:seagreen;
+    font-family: 'Redkost Comic', sans-serif;
+    background-color:rgb(75, 161, 177);
     border: 200px;
     color: white;
     padding: 25px;
@@ -59,8 +90,13 @@ top: 150pt;
 }
 
 .btnsStyle:hover{
-    color: yellow;
-   background-color: red; 
-
+   background-color: rgb(5, 238, 63); 
 } 
+
+.restartStyle:hover{
+    background-color: rgb(5, 238, 63); 
+ } 
+  
  
+ 
+ /* Create A modal */
