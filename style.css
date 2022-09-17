@@ -2,6 +2,11 @@ body{
   background-color: black;  
 }
 
+/* @font-face {
+    font-family: 'Masiku', sans-serif;
+    @import url('http://fonts.cdnfonts.com/css/masiku');
+  } */
+
 .logo{
     max-width: 20%;
     position:absolute;
@@ -22,7 +27,7 @@ body{
 } 
 
 .restartStyle {
-    font-family: 'Redkost Comic', sans-serif;
+    font-family: 'Masiku', sans-serif;
     background-color:rgb(75, 161, 177);
     border: 200px;
     padding: 25px;
@@ -41,7 +46,7 @@ body{
 }
 
 #stats{
-font-family: 'Redkost Comic', sans-serif;                                                                                   
+font-family: 'Masiku', sans-serif;                                                                                
 font-size: x-large;                                               
 color: coral;
 }
@@ -71,7 +76,7 @@ top: 150pt;
 
 
 .btnsStyle {
-    font-family: 'Redkost Comic', sans-serif;
+    font-family: 'Masiku', sans-serif;
     background-color:rgb(75, 161, 177);
     border: 200px;
     color: white;
