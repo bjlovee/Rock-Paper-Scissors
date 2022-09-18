@@ -1,4 +1,4 @@
-                            Rock, Paper, Scissors Game Read.me
+                            The Lizard Expansion
 
 									PESUDO CODE:
 

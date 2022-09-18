@@ -2,9 +2,9 @@ const playerChoiceDisplay = document.getElementById('player-choice')
 const cpuChoiceDisplay = document.getElementById('cpu-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('.btnsStyle')
-const playerScore = document.querySelector('#player-score')
+const playerScore = document.querySelector('.player-score')
 const cpuScore = document.querySelector('.cpuScore')
-console.log(possibleChoices)
+// console.log(possibleChoices)
 
 let player
 let cpuChoice
@@ -24,26 +24,24 @@ possibleChoices.forEach(possibleChoice => {
     })
 });
 
-// const rockBtn = document.getElementById('rock')
-// const paperBtn = document.getElementById('paper')
-// const scissorsBtn = document.getElementById('scissors')
-// const lizardBtn = document.getElementById('lizard')
-// const spockBtn = document.getElementById('spock')
 const restartBtn = document.querySelector('#restart')
 
 restartBtn.addEventListener('click', (event) => {
     window.location.reload();
- })
+ });
 
-function scoreDisplay() {
-if (player > cpuChoice) {
-    playerScore.innerHTML = plScore++;
-}
-if (cpuChoice > player) {
-    cpuScore.innerHTML = cpScore++;
-}
-getResult();
+    function scoreDisplay() {
+    if (player > cpuChoice) {
+        playerScore.innerHTML = plScore++;
+    } 
+    if (cpuChoice > player) {
+        cpuScore.innerHTML = cpScore++;
+    } 
+    getResult();
+    console.log(scoreDisplay);
 };
+
+
 
 function generateCpuChoice() {
     const randomNumber = Math.floor(Math.random() * 5) + 1
