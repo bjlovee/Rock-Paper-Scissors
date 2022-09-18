@@ -1,18 +1,22 @@
 body{
-  background-color: rgb(56, 122, 169);  
+  background-color: rgb(56, 122, 169); 
+  overflow: hidden;
 }
 
 .logo{
     max-width: 20%;
     position:absolute;
     left: 500pt;
-    
+    border: solid coral;
  }
 
     .rules{
     position: relative;
     left: 1150pt;
     bottom: 300pt;
+    border: solid coral;
+    /* margin-left: 50px; */
+    width: fit-content;
 } 
 
 .restartStyle {
@@ -29,7 +33,7 @@ body{
     border: solid;
     border-radius: 50px;
     border-style: groove; 
-    border-color: yellow;
+    border-color: coral;
     position: relative;
     bottom: 230pt;
     left: 12pt;
@@ -80,7 +84,7 @@ top: 150pt;
     border: solid;
     border-radius: 50px;
     border-style: groove; 
-    border-color: yellow;
+    border-color: coral;
   
 }
 

@@ -2,8 +2,8 @@ const playerChoiceDisplay = document.getElementById('player-choice')
 const cpuChoiceDisplay = document.getElementById('cpu-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('.btnsStyle')
-const playerScore = document.querySelector('.player-score')
-const cpuScore = document.querySelector('.cpuScore')
+const playerScore = document.querySelector('#player-score')
+const cpuScore = document.querySelector('#cpuScore')
 // console.log(possibleChoices)
 
 let player
