@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(56, 122, 169); 
+  background-image: linear-gradient(to right, rgb(56, 122, 169) , rgb(122, 39, 178));
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@ body{
 } 
 
 .restartStyle {
-    color: rgb(128, 61, 140);
+    color: rgb(56, 122, 169);
     font-family: 'Masiku', sans-serif;
     background-color: rgba(240, 139, 111, 0.734);
     border: 200px;
