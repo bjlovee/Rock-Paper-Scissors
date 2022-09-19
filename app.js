@@ -4,7 +4,7 @@ const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('.btnsStyle')
 const playerScore = document.querySelector('#player-score')
 const cpuScore = document.querySelector('#cpuScore')
-// console.log(possibleChoices)
+
 
 let player
 let cpuChoice
@@ -12,15 +12,15 @@ let result
 let plScore = 1;
 let cpScore = 1;
 
-
 possibleChoices.forEach(possibleChoice => {
     possibleChoice.addEventListener('click', (e) => {
         player = e.target.id
         playerChoiceDisplay.innerHTML = `Player choice: ${player}`;
         generateCpuChoice();
         getResult();
-        scoreDisplay();
-        console.log(possibleChoices)
+        playerScoreDisplay();
+        cpuScoreDisplay()
+        // console.log(possibleChoices)
     })
 });
 
@@ -29,22 +29,27 @@ const restartBtn = document.querySelector('#restart')
 restartBtn.addEventListener('click', (event) => {
     window.location.reload();
  });
-
-    function scoreDisplay() {
+   
+function playerScoreDisplay() {
     if (player > cpuChoice) {
         playerScore.innerHTML = plScore++;
-    } 
+    };
+    console.log(playerScoreDisplay);
+};
+playerScoreDisplay();
+
+function cpuScoreDisplay() {
     if (cpuChoice > player) {
         cpuScore.innerHTML = cpScore++;
-    } 
-    getResult();
-    console.log(scoreDisplay);
+    };
+    console.log(cpuScoreDisplay);
 };
+cpuScoreDisplay();
 
 
 
 function generateCpuChoice() {
-    const randomNumber = Math.floor(Math.random() * 5) + 1
+    const randomNumber = Math.floor(Math.random() * 4) + 1
 
     if(randomNumber === 1) {
         cpuChoice = 'rock'
@@ -63,6 +68,7 @@ function generateCpuChoice() {
     }
     cpuChoiceDisplay.innerHTML = cpuChoice
 }
+generateCpuChoice();
 
 function getResult() {
     if(player === cpuChoice) {
@@ -95,7 +101,7 @@ function getResult() {
     if(player === 'lizard' && cpuChoice === 'spock') {
         result = 'Player wins!'
     }
-    if(player === 'lizard' && cpuChoice === 'spock') {
+    if(player === 'lizard' && cpuChoice === 'paper') {
         result = 'Player wins!'
     }
     if(cpuChoice === 'spock' && player === 'scissors') {
@@ -125,9 +131,11 @@ function getResult() {
     if(cpuChoice === 'lizard' && player === 'spock') {
         result = 'Cpu wins!'
     }
-    if(cpuChoice === 'lizard' && player === 'spock') {
+    if(cpuChoice === 'lizard' && player === 'paper') {
         result = 'Cpu wins!'
     }
-    resultDisplay.innerHTML = result
+    resultDisplay.innerHTML = result;
+    console.log(getResult);
 };
+
 
