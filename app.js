@@ -19,7 +19,7 @@ possibleChoices.forEach(possibleChoice => {
         generateCpuChoice();
         getResult();
         playerScoreDisplay();
-        cpuScoreDisplay()
+        cpuScoreDisplay();
         // console.log(possibleChoices)
     })
 });
@@ -31,25 +31,25 @@ restartBtn.addEventListener('click', (event) => {
  });
    
 function playerScoreDisplay() {
-    if (player > cpuChoice) {
+    if (result === 'Player wins!') {
         playerScore.innerHTML = plScore++;
     };
     console.log(playerScoreDisplay);
 };
-playerScoreDisplay();
+
 
 function cpuScoreDisplay() {
-    if (cpuChoice > player) {
+    if (result === 'Cpu wins!') {
         cpuScore.innerHTML = cpScore++;
     };
     console.log(cpuScoreDisplay);
 };
-cpuScoreDisplay();
+
 
 
 
 function generateCpuChoice() {
-    const randomNumber = Math.floor(Math.random() * 4) + 1
+    const randomNumber = Math.floor(Math.random() * 5) + 1
 
     if(randomNumber === 1) {
         cpuChoice = 'rock'
