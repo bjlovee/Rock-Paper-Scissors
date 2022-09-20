@@ -13,7 +13,7 @@ body{
 
     .rules{
     position: relative;
-    left: 1150pt;
+    left: 1170pt;
     bottom: 300pt;
     border: solid coral;
     width: fit-content;
@@ -49,7 +49,7 @@ color: coral;
 
 .playerStyle{
 position: relative;
-left: 150pt;
+left: 120pt;
 top: 150pt;
 
 }

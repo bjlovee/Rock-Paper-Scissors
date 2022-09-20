@@ -20,7 +20,7 @@ possibleChoices.forEach(possibleChoice => {
         getResult();
         playerScoreDisplay();
         cpuScoreDisplay();
-        // console.log(possibleChoices)
+        console.log(possibleChoices)
     })
 });
 
