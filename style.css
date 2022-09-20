@@ -1,5 +1,11 @@
+ 
+
 body{
   background-image: linear-gradient(to right, rgb(56, 122, 169) , rgb(122, 39, 178));
+  width: 60%;
+  max-width: 1920px;
+  min-width: 480px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -9,9 +15,9 @@ body{
     left: 500pt;
     border: solid coral;
     box-shadow: 2px 20px 60px 20px  coral;
- }
+}
 
-    .rules{
+.rules{
     position: relative;
     left: 1170pt;
     bottom: 300pt;
@@ -44,15 +50,15 @@ body{
 
 
 .stats{
-font-family: 'Masiku', sans-serif;                                                                                
-font-size: x-large;                                              
-color: coral;
+    font-family: 'Masiku', sans-serif;                                                                                
+    font-size: x-large;                                              
+    color: coral;
 }
 
 .playerStyle{
-position: relative;
-left: 120pt;
-top: 150pt;
+    position: relative;
+    left: 120pt;
+    top: 150pt;
 
 }
 
@@ -61,13 +67,14 @@ top: 150pt;
     left: 830pt;
     top: 55pt;
     width: fit-content;
-    }
+}
 
-    .resultStyle{
-        position: relative;
-        left: 510pt;
-        top: 200pt
-        }
+.resultStyle{
+    position: relative;
+    left: 510pt;
+    top: 200pt
+}
+
 .btns-container {
     position: absolute;
     left: 400pt;
@@ -100,5 +107,5 @@ top: 150pt;
 
 .restartStyle:hover{
     background-color: rgb(5, 238, 63); 
- } 
+} 
   
