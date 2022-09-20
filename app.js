@@ -1,3 +1,4 @@
+// DOM ELEMENTS
 const playerChoiceDisplay = document.getElementById('player-choice')
 const cpuChoiceDisplay = document.getElementById('cpu-choice')
 const resultDisplay = document.getElementById('result')
@@ -5,49 +6,43 @@ const possibleChoices = document.querySelectorAll('.btnsStyle')
 const playerScore = document.querySelector('#player-score')
 const cpuScore = document.querySelector('#cpuScore')
 
-
+// VARIABLES
 let player
 let cpuChoice
 let result
 let plScore = 1;
 let cpScore = 1;
 
+// GAME FUNCTION 
 possibleChoices.forEach(possibleChoice => {
     possibleChoice.addEventListener('click', (e) => {
         player = e.target.id
         playerChoiceDisplay.innerHTML = `Player choice: ${player}`;
         generateCpuChoice();
         getResult();
-        playerScoreDisplay();
-        cpuScoreDisplay();
+        scoreDisplay();
         console.log(possibleChoices)
     })
 });
 
+// RESTART FUNCTION 
 const restartBtn = document.querySelector('#restart')
-
 restartBtn.addEventListener('click', (event) => {
     window.location.reload();
- });
+});
    
-function playerScoreDisplay() {
+// SCORE FUNCTION 
+function scoreDisplay() {
     if (result === 'Player wins!') {
         playerScore.innerHTML = plScore++;
     };
-    console.log(playerScoreDisplay);
-};
-
-
-function cpuScoreDisplay() {
     if (result === 'Cpu wins!') {
         cpuScore.innerHTML = cpScore++;
     };
-    console.log(cpuScoreDisplay);
+    console.log(scoreDisplay);
 };
 
-
-
-
+// COMPUTER CHOICE FUNCTION 
 function generateCpuChoice() {
     const randomNumber = Math.floor(Math.random() * 5) + 1
 
@@ -67,12 +62,12 @@ function generateCpuChoice() {
         cpuChoice = 'spock'
     }
     cpuChoiceDisplay.innerHTML = cpuChoice
-}
-generateCpuChoice();
+};
 
+// WIN CONDITIONS
 function getResult() {
     if(player === cpuChoice) {
-    result = 'Its a draw!'
+        result = 'Its a draw!'
     } 
     if(player === 'spock' && cpuChoice === 'scissors') {
         result = 'Player wins!'
