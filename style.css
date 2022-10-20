@@ -1,12 +1,7 @@
- 
-
 body{
   background-image: linear-gradient(to right, rgb(56, 122, 169) , rgb(122, 39, 178));
-  width: 60%;
-  max-width: 1920px;
-  min-width: 480px;
-  height: 200px;
   overflow: hidden;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .logo{
@@ -46,8 +41,6 @@ body{
     left: 12pt;
     box-shadow: 2px 10px 60px 20px  rgb(57, 233, 101);
 }
-
-
 
 .stats{
     font-family: 'Masiku', sans-serif;                                                                                
@@ -108,4 +101,4 @@ body{
 .restartStyle:hover{
     background-color: rgb(5, 238, 63); 
 } 
-  
+
